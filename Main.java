@@ -23,17 +23,15 @@ public class Main {
         if (usuario != null) {
             System.out.println("Bienvenido, " + usuario.getNombreUsuario() + "!");
             System.out.println("Nombre del estudiante asociado: " + usuario.getEstudiante().getNombre());
+            
+            // Recomendar clubes para el usuario que ha iniciado sesión
+            RecomendadorClubes recomendador = new RecomendadorClubes();
+            List<String> recomendaciones = recomendador.recomendacionClubes(usuario.getEstudiante(), grafo);
+            
+            // Imprimir recomendaciones
+            System.out.println("Recomendaciones para " + usuario.getEstudiante().getNombre() + ": " + recomendaciones);
         } else {
             System.out.println("Inicio de sesión fallido.");
         }
-
-        // Recomendar clubes para los estudiantes
-        RecomendadorClubes recomendador = new RecomendadorClubes();
-        List<String> recomendacionesJuan = recomendador.recomendacionClubes(juan, grafo);
-        List<String> recomendacionesMaria = recomendador.recomendacionClubes(maria, grafo);
-    
-        // Imprimir recomendaciones
-        System.out.println("Recomendaciones para Juan: " + recomendacionesJuan);
-        System.out.println("Recomendaciones para Maria: " + recomendacionesMaria);
     }
 }
