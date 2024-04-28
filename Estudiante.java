@@ -4,20 +4,28 @@ public class Estudiante {
     private String nombre;
     private List<String> intereses;
     private List<String> clubesAsistidos;
+    private List<String> accionesPreferidas;
     //Agregar pérfil psicológico
     //Agregar disponibilidad de horario
     //Agregar carrera 
     //Agregar edad
     //Agregar género
     
-
-
-    public Estudiante(String nombre, List<String> intereses, List<String> clubesAsistidos) {
+    public Estudiante(String nombre, List<String> intereses, List<String> clubesAsistido, List<String> accionesPreferidas) {
         this.nombre = nombre;
         this.intereses = intereses;
         this.clubesAsistidos = clubesAsistidos;
+        this.accionesPreferidas = accionesPreferidas;
+    }
+    
+    public List<String> getAccionesPreferidas() {
+        return accionesPreferidas;
     }
 
+    public void setAccionesPreferidas(List<String> accionesPreferidas) {
+        this.accionesPreferidas = accionesPreferidas;
+    }
+    
     public String getNombre() {
         return nombre;
     }

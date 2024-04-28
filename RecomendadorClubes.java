@@ -19,9 +19,8 @@ public class RecomendadorClubes {
         List<String> vecinos = obtenerVecinos(interes, grafo);
         for (String vecino : vecinos) {
         if (!estudiante.getClubesAsistidos().contains(vecino) && !clubesRecomendados.contains(vecino)) {
-        clubesRecomendados.add(vecino);
-        }
-        }
+        clubesRecomendados.add(vecino);}
+            }
         }
         return clubesRecomendados;
         }
