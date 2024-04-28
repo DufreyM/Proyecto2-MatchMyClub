@@ -11,7 +11,7 @@ public class Estudiante {
     //Agregar edad
     //Agregar género
     
-    public Estudiante(String nombre, List<String> intereses, List<String> clubesAsistido, List<String> accionesPreferidas) {
+    public Estudiante(String nombre, List<String> intereses, List<String> clubesAsistidos, List<String> accionesPreferidas) {
         this.nombre = nombre;
         this.intereses = intereses;
         this.clubesAsistidos = clubesAsistidos;
