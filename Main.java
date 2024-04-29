@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         GestorUsuarios gestorUsuarios = new GestorUsuarios();
         // Crear instancias de estudiantes y clubes (datos de ejemplo)
-        Estudiante juan = new Estudiante("Juan", Arrays.asList("Musical", "Deportiva"), Arrays.asList("Marimba", "Futsal"), Arrays.asList("cantar", "bailar"));
-        Estudiante maria = new Estudiante("Maria", Arrays.asList("Musical", "Artística"), Arrays.asList("Coro Voces del Valle"), Arrays.asList("tocar", "escuchar"));
+        Estudiante juan = new Estudiante("Juan", Arrays.asList("Musical", "Deportiva"), Arrays.asList("Marimba", "Futsal"), Arrays.asList("cantar", "bailar"), Estudiante.Afluencia.MODERADA);
+        Estudiante maria = new Estudiante("Maria", Arrays.asList("Musical", "Artística"), Arrays.asList("Coro Voces del Valle"), Arrays.asList("tocar", "escuchar"), Estudiante.Afluencia.ALTA);
     
         Map<String, Club> grafo = new HashMap<>();
         grafo.put("Marimba", new Club("Marimba", "Musical", Arrays.asList("Miércoles 18:15-19:45", "Viernes 14:15-16:30"), "tocar"));
